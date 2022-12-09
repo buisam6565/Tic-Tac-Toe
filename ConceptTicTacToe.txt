@@ -1,0 +1,3 @@
+Mô tả : Tic Tac Toe là trò chơi 2 người trên một bàn cơ dạng bảng 3x3
+
+Luật chơi: Hai người chọn quân cờ của mình và lần lượt đánh, một lượt một nước đi, X đi trước, bên nào có 3 quân thẳng hàng trước thì bên đó thắng.

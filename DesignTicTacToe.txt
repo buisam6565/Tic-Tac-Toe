@@ -1,0 +1,44 @@
+Thiết kế cho trò chơi huyền thoại Tic Tac Toe
+
+Công năng:
+	- In được bảng trò chơi sau mỗi lượt đánh
+	- Cho phép người chơi chọn X hoặc O
+	- Đánh tiếp sau mỗi lượt của người chơi
+	- Cho biết kết quả khi kết thúc trò chơi
+
+Chức năng bên ngoài:
+	- Hỏi lựa chọn X hay O của người chơi, nhập lại nếu nhập sai
+	- In ra bảng trò chơi dưới dạng như sau:
+	0--------------------------> (y)
+	|	+-----+-----+-----+
+	|	|     |     |     |
+	|	+-----+-----+-----+
+	|	|     |     |     |
+	|	+-----+-----+-----+
+	|	|     |     |     |
+	|	+-----+-----+-----+
+	|
+	V
+	(x)
+	- Yêu cầu người chơi chọn nước đi bằng tọa độ x y, nhập lại nếu nhập sai
+	- Thông báo kết thúc trò chơi như sau khi:
+		+ Người chơi thắng : YOU WIN! CONGRATULATION!
+		+ Cả hai bên hòa   : YOU AND YOUR COMPUTER DRAW!
+		+ Người chơi thua  : YOU LOSE! GIVE ME MONEY!
+
+Các phần cần thực hiện bên trong:
+	- Có hàm để chạy trò chơi, kết thúc thời điểm đến
+	- Cần một hàm để hiển thị bảng trên ra màn hình
+	- Hàm để xác định trò chơi đã kết thúc hay chưa ?
+	- Hàm để xác định người chiến thắng nếu trò chơi đã kết thúc
+		Gán điểm cho mỗi bảng trò chơi có thể có khi kết thúc:
+		+ X thắng -> điểm = 1
+		+ O thắng -> điểm = -1
+		+ Hòa     -> điểm = 0 
+
+	- Hàm để xác định người đi tiếp theo nếu trò chơi chưa kết thúc:
+	  Nếu tiếp theo là người chơi : Yêu cầu người chơi chọn nước đi và in bảng ra màn hình.
+
+	  Nếu tiếp theo là máy : Xác định nước đi tiếp theo bằng cách tính điểm các bảng tiếp theo có thể xảy ra:
+	  	+ Nếu nước đi tiếp theo là X, vị trí tiếp theo sẽ tạo ra bảng có điểm cao nhất trong các bảng có thể có
+	  	+ Nếu nước đi tiếp theo là O, vị trí tiếp theo sẽ tạo ra bảng có điểm thấp nhất trong các bảng có thể có
